@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(../roboto.ttf) format('truetype');
+}
+
 :root {
     --highlightColor: #fd367e;
     --tertiaryColor: #932b77;
@@ -5,13 +12,33 @@
     --primaryColor: #0e1555;
 }
 
+header {
+    background-color: var(--primaryColor);
+    min-height: 3rem;
+
+}
+
 body {
     margin: 0;
-    background-color: var(--primaryColor);
+    background-color: white;
     min-height: 100vh;
 }
 
-header {
-    background-color: var(--highlightColor);
-    height: 3rem;
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1rem;
+    font-size: 10rem;
+    color: var(--tertiaryColor);
+    font-weight: normal;
+    margin: 0;
+}
+
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
