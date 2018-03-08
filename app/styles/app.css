@@ -15,24 +15,37 @@
 header {
     background-color: var(--primaryColor);
     min-height: 3rem;
-
+    border-bottom: 4px solid var(--highlightColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 body {
     margin: 0;
     background-color: white;
     min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primaryColor);
+    font-size: 5rem;
 }
 
 
 
 h1 {
-    font-family: 'Roboto', sans-serif;
     letter-spacing: 1rem;
     font-size: 10rem;
-    color: var(--tertiaryColor);
     font-weight: normal;
     margin: 0;
+    color: var(--tertiaryColor);
+}
+
+h2 {
+    letter-spacing: 1rem;
+    font-weight: normal;
+    margin: 0;
+    color: var(--tertiaryColor);
 }
 
 
@@ -41,4 +54,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.moving-word {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.eat-time-control {
+    font-size: 1rem;
+    top: 40px;
+    left: 0;
+    right: 0;
+    position: absolute;
 }

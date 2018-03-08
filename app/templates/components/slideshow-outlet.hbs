@@ -1,0 +1,5 @@
+{{#animated-value (-get-dynamic-var "outletState") key="outlets.main.render.name" rules=rules as |outletState|}}
+  {{#-with-dynamic-vars outletState=outletState}}
+    <main>{{outlet}}</main>
+  {{/-with-dynamic-vars}}
+{{/animated-value}}

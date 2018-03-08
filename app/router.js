@@ -6,7 +6,17 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
+export const slides = [
+  'index',
+  'impart-life'
+];
+
 Router.map(function() {
+  slides.forEach(slide => {
+    if (slide !== 'index') {
+      this.route(slide);
+    }
+  });
 });
 
 export default Router;
