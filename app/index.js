@@ -8,12 +8,12 @@ export const slides = [
   'impart-life',
   'impart-life-with-code',
   'title-with-code',
-  'snippet',
   'formats',
 ];
 
 export const transitions = [
   { from: 'index', to: 'impart-life', use: fade },
-  { from: 'impart-life', to: 'impart-life-with-code', use: toLeft, reverse: toRight }
+  { from: 'impart-life', to: 'impart-life-with-code', use: toLeft, reverse: toRight },
+  { from: 'title-with-code', to: 'impart-life-with-code', use: fade },
 
 ];
