@@ -80,3 +80,25 @@ main {
 .image-quilt > img {
     height: 250px;
 }
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.side-by-side > div {
+    width: 50%;
+    height: 100vh;
+}
+
+.side-by-side > div > div {
+    width: 100vw;
+    transform: scale(0.5);
+    height: 100vh;
+    margin-top: 25vh;
+    transform-origin: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
