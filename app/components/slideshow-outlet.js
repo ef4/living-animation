@@ -1,8 +1,11 @@
 import Component from '@ember/component';
 import { fadeIn, fadeOut } from 'ember-animated/motions/opacity';
 import { printSprites } from 'ember-animated';
+import { slideTransitionDuration } from 'living-animation';
 
 export default Component.extend({
+  duration: slideTransitionDuration,
+
   rules: function({ newItems, oldItems }) {
     let oldRoute = oldItems[oldItems.length - 1];
     let newRoute = newItems[newItems.length - 1];

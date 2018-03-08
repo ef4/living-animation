@@ -1,15 +1,11 @@
 import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
+import { slides } from 'living-animation';
 
 const Router = EmberRouter.extend({
   location: config.locationType,
   rootURL: config.rootURL
 });
-
-export const slides = [
-  'index',
-  'impart-life'
-];
 
 Router.map(function() {
   slides.forEach(slide => {

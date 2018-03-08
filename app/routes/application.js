@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import { inject } from '@ember/service';
-import { slides } from '../router';
+import { slides } from 'living-animation';
 
 const ENTER = 13;
 const RIGHT_ARROW = 39;
