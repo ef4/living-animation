@@ -68,3 +68,7 @@ main {
     right: 0;
     position: absolute;
 }
+
+.hljs {
+    background-color: inherit;
+}
