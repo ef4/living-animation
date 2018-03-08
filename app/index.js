@@ -5,7 +5,8 @@ export const slideTransitionDuration = 800;
 export const slides = [
   'index',
   'impart-life',
-  'snippet'
+  'snippet',
+  'formats',
 ];
 
 export const transitions = [

@@ -72,3 +72,11 @@ main {
 .hljs {
     background-color: inherit;
 }
+
+.image-quilt {
+    font-size: 0;
+}
+
+.image-quilt > img {
+    height: 250px;
+}
