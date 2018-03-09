@@ -6,11 +6,14 @@ import { wait } from 'ember-animated';
 
 export default Controller.extend({
   indexTransition: function * ({ sentSprites, receivedSprites, removedSprites, insertedSprites }) {
-    sentSprites.forEach(sprite => { arguments[0].onMotionStart(sprite) })
-
     let screenBounds = document.documentElement.getBoundingClientRect();
-    let screenCenterX = screenBounds.width / 2;
-    let screenCenterY = screenBounds.height / 2;
+    let motionCenterX, motionCenterY;
+
+    sentSprites.forEach(sprite => {
+      motionCenterX = sprite.absoluteInitialBounds.left + sprite.absoluteInitialBounds.width / 2;
+      motionCenterY = sprite.absoluteInitialBounds.top + sprite.absoluteInitialBounds.height / 2;
+      arguments[0].onMotionStart(sprite);
+    })
 
     let distances = new Map();
 
@@ -18,8 +21,8 @@ export default Controller.extend({
       let centerX = sprite.absoluteInitialBounds.left + sprite.absoluteInitialBounds.width / 2;
       let centerY = sprite.absoluteInitialBounds.top + sprite.absoluteInitialBounds.height / 2;
 
-      let dx = centerX - screenCenterX;
-      let dy = centerY - screenCenterY;
+      let dx = centerX - motionCenterX;
+      let dy = centerY - motionCenterY;
 
       let distanceFromCenter = Math.sqrt(dx*dx + dy*dy);
       let magnify = 2 * screenBounds.width / distanceFromCenter;
@@ -45,14 +48,20 @@ export default Controller.extend({
       scale(sprite);
     });
 
+    receivedSprites.forEach(sprite => {
+      motionCenterX = sprite.absoluteFinalBounds.left + sprite.absoluteFinalBounds.width / 2;
+      motionCenterY = sprite.absoluteFinalBounds.top + sprite.absoluteFinalBounds.height / 2;
+    })
+
+
     distances = new Map();
 
     insertedSprites.forEach(sprite => {
       let centerX = sprite.absoluteFinalBounds.left + sprite.absoluteFinalBounds.width / 2;
       let centerY = sprite.absoluteFinalBounds.top + sprite.absoluteFinalBounds.height / 2;
 
-      let dx = centerX - screenCenterX;
-      let dy = centerY - screenCenterY;
+      let dx = centerX - motionCenterX;
+      let dy = centerY - motionCenterY;
 
       let distanceFromCenter = Math.sqrt(dx*dx + dy*dy);
       let magnify = 2 * screenBounds.width / distanceFromCenter;
