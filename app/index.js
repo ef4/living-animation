@@ -8,7 +8,7 @@ export const slides = [
   'impart-life',
   'impart-life-with-code',
   'title-with-code',
-  'formats',
+  'affordances',
 ];
 
 export const transitions = [
