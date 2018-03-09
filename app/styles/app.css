@@ -78,6 +78,10 @@ main {
     font-size: 0;
 }
 
+.image-quilt > a {
+    display: inline-block;
+}
+
 .image-quilt > a > img {
     height: 250px;
 }
