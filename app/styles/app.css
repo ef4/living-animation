@@ -78,7 +78,7 @@ main {
     font-size: 0;
 }
 
-.image-quilt > img {
+.image-quilt > a > img {
     height: 250px;
 }
 

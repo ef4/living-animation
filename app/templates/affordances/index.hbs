@@ -1,0 +1,7 @@
+<div class="image-quilt">
+  {{#each model as |picture|}}
+    {{#link-to "affordances.detail" picture.id }}
+      <img src={{picture.url}} >
+    {{/link-to}}
+  {{/each}}
+</div>

@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { slideTransitionDuration, transitions } from 'living-animation';
+import { slideTransitionDuration, transitions } from 'living-animation/router';
 
 export default Component.extend({
   duration: slideTransitionDuration,

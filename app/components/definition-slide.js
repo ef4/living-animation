@@ -3,7 +3,7 @@ import move from 'ember-animated/motions/move';
 import scale from 'ember-animated/motions/scale';
 import { fadeOut, fadeIn } from 'ember-animated/motions/opacity';
 import { parallel } from 'ember-animated';
-import { slideTransitionDuration } from 'living-animation';
+import { slideTransitionDuration } from 'living-animation/router';
 
 export default Component.extend({
   duration: slideTransitionDuration,
