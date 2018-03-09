@@ -4,8 +4,17 @@ import scale from 'ember-animated/motions/scale';
 import { easeIn, easeOut } from 'ember-animated/easings/cosine';
 import { wait } from 'ember-animated';
 
+// how many screen widths away from the center count as "away of screen"
+const awayDistance = 2;
+
+const perSpriteDelay = 25;
+
 export default Controller.extend({
   indexTransition: function * ({ sentSprites, receivedSprites, removedSprites, insertedSprites }) {
+    if (sentSprites.length === 0 && receivedSprites.length === 0) {
+      return;
+    }
+
     let screenBounds = document.documentElement.getBoundingClientRect();
     let motionCenterX, motionCenterY;
 
@@ -25,7 +34,7 @@ export default Controller.extend({
       let dy = centerY - motionCenterY;
 
       let distanceFromCenter = Math.sqrt(dx*dx + dy*dy);
-      let magnify = 2 * screenBounds.width / distanceFromCenter;
+      let magnify = awayDistance * screenBounds.width / distanceFromCenter;
 
       // our sprite's center and the screen's center form a line. We
       // want to aim for a place along that line far offscreen.
@@ -37,7 +46,7 @@ export default Controller.extend({
     removedSprites.sort((a,b) => distances.get(b) - distances.get(a));
     for (let sprite of removedSprites) {
       move(sprite, { easing: easeIn });
-      yield wait(25);
+      yield wait(perSpriteDelay);
     }
 
     sentSprites.concat(receivedSprites).forEach(sprite => {
@@ -64,7 +73,7 @@ export default Controller.extend({
       let dy = centerY - motionCenterY;
 
       let distanceFromCenter = Math.sqrt(dx*dx + dy*dy);
-      let magnify = 2 * screenBounds.width / distanceFromCenter;
+      let magnify = awayDistance * screenBounds.width / distanceFromCenter;
 
       // our sprite's center and the screen's center form a line. We
       // want to aim for a place along that line far offscreen.
@@ -76,7 +85,7 @@ export default Controller.extend({
     insertedSprites.sort((a,b) => distances.get(a) - distances.get(b));
     for (let sprite of insertedSprites) {
       move(sprite, { easing: easeOut });
-      yield wait(25);
+      yield wait(perSpriteDelay);
     }
   }
 });
