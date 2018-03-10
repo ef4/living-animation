@@ -7,7 +7,7 @@ import { wait } from 'ember-animated';
 // how many screen widths away from the center count as "away of screen"
 const awayDistance = 2;
 
-const perSpriteDelay = 25;
+const perSpriteDelay = 5;
 
 export default Controller.extend({
   indexTransition: function * ({ sentSprites, receivedSprites, removedSprites, insertedSprites }) {
