@@ -10,12 +10,14 @@
     --tertiaryColor: #932b77;
     --secondaryColor: #4e1184;
     --primaryColor: #0e1555;
+    --header-height: 30px;
 }
 
 header {
     background-color: var(--primaryColor);
-    min-height: 3rem;
+    height: var(--header-height);
     border-bottom: 4px solid var(--highlightColor);
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
@@ -23,9 +25,11 @@ header {
 }
 
 body {
+    padding-top: var(--header-height);
+    min-height: 100vh;
+    box-sizing: border-box;
     margin: 0;
     background-color: white;
-    min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     color: var(--primaryColor);
     font-size: 5rem;
@@ -51,7 +55,7 @@ h2 {
 
 
 main {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--header-height));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,13 +98,13 @@ main {
 
 .side-by-side > div {
     width: 50%;
-    height: 100vh;
+    height: calc(100vh - var(--header-height));
 }
 
 .side-by-side > div > div {
     width: 100vw;
     transform: scale(0.5);
-    height: 100vh;
+    height: calc(100vh - var(--header-height));
     margin-top: 25vh;
     transform-origin: 0 0;
     display: flex;
