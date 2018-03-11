@@ -112,6 +112,11 @@ main {
     align-items: center;
 }
 
+.mascots {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .mascots .mascot-card {
     margin: 10px;
 }
@@ -121,9 +126,21 @@ main {
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     padding: 30px;
-    width: 500px;
+    width: 250px;
+    height: 125px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mascot-card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 0;
 }
 
 .mascot-card img {
-    max-height: 280px;
+    height: 100%;
 }
