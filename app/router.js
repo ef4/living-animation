@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('affordances', function() {
     this.route('detail', { path: '/:id' });
   });
+  this.route('mascots');
 });
 
 export default Router;
