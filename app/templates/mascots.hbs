@@ -1,8 +1,8 @@
 <div class="mascots">
-  {{#each model as |mascot|}}
-    <div class="mascot-card">
+  {{#animated-each mascots use=transition as |mascot|}}
+    <div class="mascot-card" {{action "hide" mascot }}>
       <img src={{mascot.imageURL}} />
       <h3>{{mascot.title}}</h3>
     </div>
-  {{/each}}
+  {{/animated-each}}
 </div>
