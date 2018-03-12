@@ -6,12 +6,6 @@ import groupBy from 'lodash/groupBy';
 
 export default Controller.extend({
   transition: function * ({ keptSprites, removedSprites }) {
-    // if *everything* is leaving, we're just done with our page and
-    // don't want to animate anything
-    if (keptSprites.length === 0) {
-      return;
-    }
-
     yield Promise.all(removedSprites.map(sprite => fadeOut(sprite, { duration: 200 })));
 
     keptSprites.forEach(sprite => {
