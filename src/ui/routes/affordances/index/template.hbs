@@ -1,7 +1,9 @@
-{{#animated-container class="image-quilt" }}
-  {{#animated-each model use=indexTransition initialInsertion=true duration=500 as |picture|}}
-    {{#link-to "affordances.detail" picture.id }}
-      <img src={{picture.url}} width={{picture.width}} height=250 >
-    {{/link-to}}
-  {{/animated-each}}
-{{/animated-container}}
+<div>
+  {{#animated-container class="image-quilt" }}
+    {{#animated-each model use=indexTransition initialInsertion=true duration=500 as |picture|}}
+      {{#link-to "affordances.detail" picture.id }}
+        <img src={{picture.url}} width={{picture.width}} height=250 >
+      {{/link-to}}
+    {{/animated-each}}
+  {{/animated-container}}
+</div>
