@@ -138,6 +138,20 @@ main {
     height: 100%;
 }
 
+.mascot-icon {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+.mascot-icon img {
+    height: 100%;
+}
+
+
 .edge-tray {
     position: fixed;
     top: 0;

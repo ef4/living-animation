@@ -1,0 +1,8 @@
+<div class="tutorial-01">
+  <button {{action "addRandom"}}>Add Random</button>
+  {{#animated-container}}
+    {{#animated-each mascots use=transition as |mascot|}}
+      {{mascot-icon model=mascot onclick=(action "unfav" mascot) }}
+    {{/animated-each}}
+  {{/animated-container}}
+</div>

@@ -16,6 +16,7 @@ Router.map(function() {
     this.route('detail', { path: '/:id' });
   });
   this.route('mascots');
+  this.route('tutorial-01');
 });
 
 export default Router;
