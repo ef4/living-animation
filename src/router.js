@@ -23,6 +23,8 @@ Router.map(function() {
   this.route('tutorial-04');
   this.route('tutorial-05');
   this.route('tutorial-06');
+  this.route('tutorial-07');
+  this.route('tutorial-08');
 });
 
 export default Router;
