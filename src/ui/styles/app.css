@@ -32,7 +32,6 @@ body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
     color: var(--primaryColor);
-    font-size: 5rem;
     overflow-x: hidden;
 }
 
@@ -44,6 +43,10 @@ h1.title-slide {
     font-weight: normal;
     margin: 0;
     color: var(--tertiaryColor);
+}
+
+.definition-slide {
+    font-size: 5rem;
 }
 
 .definition-slide h2 {
@@ -67,6 +70,7 @@ main {
 }
 
 .hljs {
+    font-size: 3rem;
     background-color: inherit;
 }
 
@@ -102,6 +106,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.side-by-side .hljs {
+    font-size: 5rem;
 }
 
 .mascots {

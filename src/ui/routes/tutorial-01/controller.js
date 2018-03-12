@@ -7,7 +7,7 @@ export default Controller.extend({
   }),
 
   actions: {
-    addRandom() {
+    favRandom() {
       let notYetChosen = this.model.filter(m => !m.favorite);
       if (notYetChosen.length === 0) {
         return;

@@ -17,6 +17,7 @@ Router.map(function() {
   });
   this.route('mascots');
   this.route('tutorial-01');
+  this.route('tutorial-02');
 });
 
 export default Router;

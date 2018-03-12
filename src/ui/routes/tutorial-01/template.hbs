@@ -1,9 +1,14 @@
 <div class="tutorial-01">
+  {{! BEGIN-SNIPPET tutorial-01 }}
   <h2>My Favorite Zoeys and Tomsters</h2>
-  <button class="tutorial" {{action "addRandom"}}>Add Random</button>
+  <button class="tutorial" {{action "favRandom"}}>
+    Add Random
+  </button>
   <div>
     {{#each mascots as |mascot|}}
-      {{mascot-icon model=mascot onclick=(action "unfav" mascot) }}
+      {{mascot-icon model=mascot
+                    onclick=(action "unfav" mascot) }}
     {{/each}}
   </div>
+  {{! END-SNIPPET }}
 </div>
