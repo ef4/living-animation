@@ -1,12 +1,12 @@
 <div class="tutorial">
-  {{! BEGIN-SNIPPET tutorial-06 }}
-  <h2>With Moving keptSprites and insertedSprites</h2>
+  {{! BEGIN-SNIPPET tutorial-04 }}
+  <h2>Flexbox Layout</h2>
   <button class="tutorial" {{action "favRandom"}}>
     Add Random
   </button>
-  <div>
+  <div class="mascots" >
     {{#animated-each mascots use=transition as |mascot|}}
-      {{mascot-icon model=mascot
+      {{mascot-card model=mascot
                     onclick=(action "unfav" mascot) }}
     {{/animated-each}}
   </div>
