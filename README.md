@@ -1,3 +1,5 @@
+Hello intrepid traveler, this presentation is not done yet but you may come along for the ride.
+
 # living-animation
 
 This README outlines the details of collaborating on this Ember application.

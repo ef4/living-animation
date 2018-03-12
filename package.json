@@ -4,12 +4,12 @@
   "private": true,
   "description": "Small description for living-animation goes here",
   "license": "MIT",
-  "author": "",
+  "author": "Edward Faulkner <edward@eaf4.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/ef4/living-animation",
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint ./*.js app config lib server tests",
