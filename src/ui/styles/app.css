@@ -74,7 +74,7 @@ main.code {
 }
 
 .hljs {
-    font-size: 3rem;
+    font-size: 2.5rem;
     background-color: inherit;
 }
 
@@ -199,9 +199,13 @@ main.code {
     border: 1px solid black;
 }
 
-.tutorial-01 {
+.tutorial {
     padding: 3rem;
     font-size: 1rem;
+}
+
+.tutorial h2 {
+    display: inline-block;
 }
 
 button.tutorial {
