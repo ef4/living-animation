@@ -38,7 +38,7 @@ body {
 
 
 
-h1 {
+h1.title-slide {
     letter-spacing: 1rem;
     font-size: 10rem;
     font-weight: normal;
@@ -46,7 +46,7 @@ h1 {
     color: var(--tertiaryColor);
 }
 
-h2 {
+.definition-slide h2 {
     letter-spacing: 1rem;
     font-weight: normal;
     margin: 0;
@@ -185,4 +185,23 @@ main {
 .edge-tray-panel {
     background-color: #ddd;
     border: 1px solid black;
+}
+
+.tutorial-01 {
+    padding: 3rem;
+    font-size: 1rem;
+}
+
+button.tutorial {
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+    border: 1px solid var(--tertiaryColor);
+    color: var(--tertiaryColor);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 250ms, background-color 250ms;
+}
+button.tutorial:hover {
+    background-color: var(--primaryColor);
+    color: var(--highlightColor);
 }
