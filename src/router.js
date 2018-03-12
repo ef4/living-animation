@@ -15,7 +15,6 @@ Router.map(function() {
   this.route('affordances', function() {
     this.route('detail', { path: '/:id' });
   });
-  this.route('mascots');
   this.route('tutorial-01');
   this.route('tutorial-02');
   this.route('tutorial-03');

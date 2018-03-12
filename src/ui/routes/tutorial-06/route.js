@@ -1,1 +1,1 @@
-export { default } from '../mascots/route';
+export { default } from '../tutorial-01/route';
