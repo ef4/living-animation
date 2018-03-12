@@ -1,0 +1,20 @@
+<div class="tutorial">
+  {{! BEGIN-SNIPPET tutorial-17 }}
+  <h2>With Container</h2>
+  <button class="tutorial" {{action "favRandom"}}>
+    Add Random
+  </button>
+  {{#animated-container}}
+    {{#animated-each mascots use=transition as |mascot|}}
+      {{mascot-icon model=mascot
+                    onclick=(action "unfav" mascot) }}
+    {{/animated-each}}
+  {{/animated-container}}
+  <p>
+    Tomster was the first of many friendly faces of the Ember project
+    and community. Over the years we've dressed and redressed him for
+    all sorts of fun projects and reasons. With the addition of his
+    sister Zoey, you'll see Ember friends around even more.
+  </p>
+  {{! END-SNIPPET }}
+</div>

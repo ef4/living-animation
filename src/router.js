@@ -29,6 +29,11 @@ Router.map(function() {
   this.route('tutorial-11');
   this.route('tutorial-12');
   this.route('tutorial-13');
+  this.route('no-cloning');
+  this.route('tutorial-14');
+  this.route('tutorial-15');
+  this.route('tutorial-16');
+  this.route('tutorial-17');
 });
 
 export default Router;

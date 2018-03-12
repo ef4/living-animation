@@ -56,17 +56,37 @@ h1.title-slide {
     color: var(--tertiaryColor);
 }
 
-
 main {
     min-height: calc(100vh - var(--header-height));
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 main.code {
     display: block;
 }
+
+.no-cloning h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    font-weight: normal;
+    margin: 0;
+    color: var(--tertiaryColor);
+}
+
+.no-cloning > div {
+    position: relative;
+}
+
+.no-cloning > div > svg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+
 
 .moving-word {
     display: inline-block;
