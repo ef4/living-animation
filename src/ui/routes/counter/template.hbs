@@ -1,0 +1,19 @@
+{{#side-by-side class="more-code unscaled" }}
+  <div class="tutorial counter">
+    <button class="tutorial" {{action "decrement"}}>-</button>
+    <button class="tutorial" {{action "increment"}}>+</button>
+
+    {{! BEGIN-SNIPPET counter }}
+    {{#animated-container}}
+      {{#animated-value counter
+                        rules=rules
+                        duration=1000 as |v|}}
+        <span>{{v}}</span>
+      {{/animated-value}}
+    {{/animated-container}}
+    {{! END-SNIPPET counter }}
+  </div>
+
+{{else}}
+  {{code-snippet name="counter.hbs"}}
+{{/side-by-side}}
