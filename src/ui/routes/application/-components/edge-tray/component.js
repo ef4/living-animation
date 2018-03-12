@@ -9,7 +9,7 @@ export default Component.extend({
   }),
   actions: {
     toggle() {
-      if (this.get('isOpen')) {
+      if (this.isOpen) {
         localStorage.removeItem('edge-tray-open');
       } else {
         localStorage.setItem('edge-tray-open', true);

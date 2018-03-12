@@ -12,7 +12,7 @@ export default Route.extend({
   router: inject(),
 
   beforeModel() {
-    if (this.get('fastboot.isFastBoot')) {
+    if (this.fastboot.isFastBoot) {
       return;
     }
     document.addEventListener('keydown', event => {
@@ -39,8 +39,8 @@ export default Route.extend({
   },
 
   stepSlide(steps) {
-    let slides = this.get('slides');
-    let currentIndex = slides.indexOf(this.get('router.currentRouteName').split('.')[0]);
+    let slides = this.slides;
+    let currentIndex = slides.indexOf(this.router.currentRouteName.split('.')[0]);
     if (currentIndex === -1) {
       currentIndex = 0;
     }
@@ -48,12 +48,12 @@ export default Route.extend({
   },
 
   isChildSlide() {
-    let parts = this.get('router.currentRouteName').split('.');
+    let parts = this.router.currentRouteName.split('.');
     return parts.length > 1 && parts[1] !== 'index';
   },
 
   toParentSlide() {
-    let parts = this.get('router.currentRouteName').split('.');
+    let parts = this.router.currentRouteName.split('.');
     if (parts.length > 1) {
       this.transitionTo(parts[0] + '.index');
     }

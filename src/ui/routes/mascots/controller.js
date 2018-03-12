@@ -35,7 +35,7 @@ export default Controller.extend({
   },
 
   mascots: computed('model.@each.hidden', function() {
-    return this.get('model').filter(m => !m.get('hidden'));
+    return this.model.filter(m => !m.hidden);
   }),
 
   actions: {
