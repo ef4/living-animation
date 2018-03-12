@@ -1,17 +1,7 @@
 import Controller from '@ember/controller';
-import move from 'ember-animated/motions/move';
 import { computed } from '@ember/object';
-import { easeOut } from 'ember-animated/easings/cosine';
 
 export default Controller.extend({
-  transition: function * ({ keptSprites, insertedSprites }) {
-    keptSprites.forEach(move);
-    insertedSprites.forEach(sprite => {
-      sprite.startAtPixel({ x: window.innerWidth });
-      move(sprite, { easing: easeOut });
-    });
-  },
-
   mascots: computed('model.@each.favorite', function() {
     return this.model.filter(m => m.favorite);
   }),

@@ -1,9 +1,9 @@
 <div class="tutorial-01">
   <h2>My Favorite Zoeys and Tomsters</h2>
   <button class="tutorial" {{action "addRandom"}}>Add Random</button>
-  {{#animated-container}}
-    {{#animated-each mascots use=transition as |mascot|}}
+  <div>
+    {{#each mascots as |mascot|}}
       {{mascot-icon model=mascot onclick=(action "unfav" mascot) }}
-    {{/animated-each}}
-  {{/animated-container}}
+    {{/each}}
+  </div>
 </div>
