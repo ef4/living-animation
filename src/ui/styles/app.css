@@ -64,6 +64,10 @@ main {
     align-items: center;
 }
 
+main.code {
+    display: block;
+}
+
 .moving-word {
     display: inline-block;
     vertical-align: top;

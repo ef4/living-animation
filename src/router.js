@@ -18,6 +18,11 @@ Router.map(function() {
   this.route('mascots');
   this.route('tutorial-01');
   this.route('tutorial-02');
+  this.route('tutorial-03');
+  this.route('tutorial-03-1');
+  this.route('tutorial-04');
+  this.route('tutorial-05');
+  this.route('tutorial-06');
 });
 
 export default Router;

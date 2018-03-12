@@ -1,0 +1,14 @@
+<div class="tutorial-01">
+  {{! BEGIN-SNIPPET tutorial-04 }}
+  <h2>My Favorite Zoeys and Tomsters</h2>
+  <button class="tutorial" {{action "favRandom"}}>
+    Add Random
+  </button>
+  <div>
+    {{#animated-each mascots use=transition as |mascot|}}
+      {{mascot-icon model=mascot
+                    onclick=(action "unfav" mascot) }}
+    {{/animated-each}}
+  </div>
+  {{! END-SNIPPET }}
+</div>
