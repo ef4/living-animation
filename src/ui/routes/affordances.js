@@ -4,7 +4,7 @@ import ENV from 'living-animation/config/environment';
 export default Route.extend({
   model() {
     return [
-      { id: 'steamboat', width: 287 },
+      { id: 'steamboat', width: 287   },
       { id: 'gromit', width: 444      },
       { id: 'sully', width: 278       },
       { id: 'mario', width: 362       },
@@ -19,6 +19,10 @@ export default Route.extend({
       { id: 'concurrency' , width: 360},
       { id: 'animoji', width: 333     },
     ].map(model => {
+      // the above widths are correct for a height of 250px. Here we
+      // scale them.
+      model.width = model.width * 170 / 250;
+      model.height = 170;
       model.url = `${ENV.rootURL}images/${model.id}.gif`;
       return model;
     });
