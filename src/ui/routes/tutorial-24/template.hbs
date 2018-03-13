@@ -1,0 +1,11 @@
+<div class="tutorial">
+  <h2>Flexbox Layout: With Reordering</h2>
+  <div class="mascots" >
+    {{#animated-each sortedMascots use=transition duration=200 watch="dragState,sortPriority" as |mascot|}}
+      <div class="mascot-card" onmousedown={{action beginDragging mascot }}>
+        <img class="mascot-card-image" draggable="false" src={{mascot.imageURL}} />
+        <h3>{{mascot.title}} {{mascot.sortPriority}}</h3>
+      </div>
+    {{/animated-each}}
+  </div>
+</div>

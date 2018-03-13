@@ -43,6 +43,7 @@ Router.map(function() {
   this.route('tutorial-23', function() {
     this.route('detail', { path: '/:id' });
   });
+  this.route('tutorial-24');
 });
 
 export default Router;
