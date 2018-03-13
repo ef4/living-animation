@@ -24,8 +24,6 @@ Router.map(function() {
   this.route('tutorial-06');
   this.route('tutorial-07');
   this.route('tutorial-08');
-  this.route('tutorial-09');
-  this.route('tutorial-10');
   this.route('tutorial-11');
   this.route('tutorial-12');
   this.route('tutorial-13');
