@@ -2156,9 +2156,9 @@ ember-ajax@^3.0.0:
   dependencies:
     ember-cli-babel "^6.0.0"
 
-ember-animated-tools@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/ember-animated-tools/-/ember-animated-tools-0.1.1.tgz#2ebf850e63d3e641b4cb2f46f00c50cbdd55cddf"
+ember-animated-tools@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ember-animated-tools/-/ember-animated-tools-0.2.0.tgz#f721431ded563d34ddf8cd0ee2f2dde7b2bfe74d"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
@@ -2166,9 +2166,9 @@ ember-animated-tools@^0.1.1:
     ember-cli-htmlbars "^2.0.1"
     resolve "^1.5.0"
 
-ember-animated@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/ember-animated/-/ember-animated-0.1.0.tgz#662be89d2260eb07be0d007099746e61655b6e93"
+ember-animated@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ember-animated/-/ember-animated-0.2.0.tgz#c19ac16b9f2fcb857b25657a722031848a349ce9"
   dependencies:
     ember-cli-babel "^6.11.0"
     ember-cli-htmlbars "^2.0.1"
@@ -3129,20 +3129,7 @@ fastboot-transform@^0.1.2:
     broccoli-stew "^1.5.0"
     convert-source-map "^1.5.1"
 
-fastboot@^1.1.0, fastboot@^1.1.2:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/fastboot/-/fastboot-1.1.3.tgz#56c5f56415c5ae8de2db539c0d3ecbcd65538f8b"
-  dependencies:
-    chalk "^2.0.1"
-    cookie "^0.3.1"
-    debug "^3.0.0"
-    exists-sync "0.0.4"
-    najax "^1.0.2"
-    rsvp "^4.7.0"
-    simple-dom "^1.0.0"
-    source-map-support "^0.5.0"
-
-"fastboot@github:rondale-sc/fastboot#utilize-rehydration-serialization-from-glimmer":
+fastboot@^1.1.0, fastboot@^1.1.2, "fastboot@github:rondale-sc/fastboot#utilize-rehydration-serialization-from-glimmer":
   version "1.1.3"
   resolved "https://codeload.github.com/rondale-sc/fastboot/tar.gz/ac5911f97de4facb2ac468b04436e97c22d261f7"
   dependencies:
