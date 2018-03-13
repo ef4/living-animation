@@ -191,6 +191,7 @@ main.code {
     flex-direction: column;
     background-color: white;
     cursor: pointer;
+    user-select: none;
 }
 
 .mascot-card h3 {
