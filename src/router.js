@@ -49,6 +49,8 @@ Router.map(function() {
     this.route('detail', { path: '/:id' });
   });
   this.route('tutorial-24');
+  this.route('testing');
+  this.route('quest');
   this.route('links');
 });
 
