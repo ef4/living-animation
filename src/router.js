@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('liquid-fire');
   this.route('game-inspired');
   this.route('intro-ea');
+  this.route('name');
   this.route('tutorial-01');
   this.route('tutorial-02');
   this.route('tutorial-03');
