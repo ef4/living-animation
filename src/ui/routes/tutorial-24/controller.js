@@ -2,7 +2,7 @@ import Controller from '../tutorial-01/controller';
 import move from 'ember-animated/motions/move';
 import { sortBy } from 'lodash';
 import { computed } from '@ember/object';
-import { task, rAF, printSprites } from 'ember-animated';
+import { task, rAF } from 'ember-animated';
 import drag from './-utils/drag';
 
 export default Controller.extend({
@@ -44,22 +44,20 @@ export default Controller.extend({
   }),
 
   transition: function * ({ keptSprites }) {
-    //printSprites(arguments[0]);
     let activeSprite = keptSprites.find(sprite => sprite.owner.value.dragState);
-    if (!activeSprite) {
-      return;
-    }
     let others = keptSprites.filter(sprite => sprite !== activeSprite);
-    drag(activeSprite, {
-      others,
-      onCollision(otherSprite) {
-        let myModel = activeSprite.owner.value;
-        let otherModel = otherSprite.owner.value;
-        let myPriority = myModel.sortPriorityWithDefault;
-        myModel.set('sortPriority', otherModel.sortPriorityWithDefault);
-        otherModel.set('sortPriority', myPriority);
-      }
-    });
+    if (activeSprite) {
+      drag(activeSprite, {
+        others,
+        onCollision(otherSprite) {
+          let myModel = activeSprite.owner.value;
+          let otherModel = otherSprite.owner.value;
+          let myPriority = myModel.sortPriorityWithDefault;
+          myModel.set('sortPriority', otherModel.sortPriorityWithDefault);
+          otherModel.set('sortPriority', myPriority);
+        }
+      });
+    }
     others.forEach(move);
   },
 
