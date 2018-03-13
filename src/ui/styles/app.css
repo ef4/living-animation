@@ -57,6 +57,21 @@ h1.title-slide {
     color: var(--tertiaryColor);
 }
 
+.biggish {
+    font-size: 4rem;
+    font-weight: normal;
+    margin: 0;
+    color: var(--tertiaryColor);
+}
+
+.subhead {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+    color: var(--primaryColor);
+}
+
+
 main {
     min-height: calc(100vh - var(--header-height));
     display: flex;

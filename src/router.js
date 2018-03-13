@@ -15,6 +15,11 @@ Router.map(function() {
   this.route('affordances', function() {
     this.route('detail', { path: '/:id' });
   });
+  this.route('pure-css');
+  this.route('js-apis');
+  this.route('liquid-fire');
+  this.route('game-inspired');
+  this.route('intro-ea');
   this.route('tutorial-01');
   this.route('tutorial-02');
   this.route('tutorial-03');
@@ -44,6 +49,7 @@ Router.map(function() {
     this.route('detail', { path: '/:id' });
   });
   this.route('tutorial-24');
+  this.route('links');
 });
 
 export default Router;

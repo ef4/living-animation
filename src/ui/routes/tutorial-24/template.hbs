@@ -4,7 +4,7 @@
     {{#animated-each sortedMascots use=transition duration=200 watch="dragState" as |mascot|}}
       <div class="mascot-card" onmousedown={{action beginDragging mascot }}>
         <img class="mascot-card-image" draggable="false" src={{mascot.imageURL}} />
-        <h3>{{mascot.title}} {{mascot.sortPriority}}</h3>
+        <h3>{{mascot.title}}</h3>
       </div>
     {{/animated-each}}
   </div>
