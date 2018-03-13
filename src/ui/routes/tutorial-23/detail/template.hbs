@@ -1,0 +1,8 @@
+<div>
+  <h2>{{model.title}}</h2>
+  {{#animated-container}}
+    {{#animated-value model use=transition duration=duration}}
+      {{mascot-card model=model variant="large"}}
+    {{/animated-value}}
+  {{/animated-container}}
+</div>

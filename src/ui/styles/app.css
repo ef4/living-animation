@@ -188,6 +188,20 @@ main.code {
     height: 100%;
 }
 
+.mascot-card.large {
+    width: 500px;
+    height: 250px;
+}
+
+.mascot-card.large {
+    width: 500px;
+    height: 250px;
+}
+
+.mascot-card > .animated-container {
+    height: 100%;
+}
+
 .mascot-icon {
     width: 100px;
     height: 60px;

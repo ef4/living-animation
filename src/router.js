@@ -40,6 +40,9 @@ Router.map(function() {
   this.route('tutorial-21');
   this.route('tutorial-22');
   this.route('sprite-categories');
+  this.route('tutorial-23', function() {
+    this.route('detail', { path: '/:id' });
+  });
 });
 
 export default Router;
@@ -50,4 +53,5 @@ export const transitions = [
   { from: 'index', to: 'impart-life', use: fade },
   { from: 'impart-life', to: 'impart-life-with-code', use: toLeft, reverse: toRight },
   { from: 'title-with-code', to: 'impart-life-with-code', use: fade },
+  { from: 'tutorial-23.index', to: 'tutorial-23.detail', use: toLeft, reverse: toRight },
 ];

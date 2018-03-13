@@ -1,0 +1,9 @@
+<div>
+  <h2>Far Matching Across Routes</h2>
+  {{#animated-container class="mascots" }}
+    {{#animated-each model use=transition duration=duration as |mascot|}}
+      {{mascot-card model=mascot
+                    onclick=(action "visit" mascot) }}
+    {{/animated-each}}
+  {{/animated-container}}
+</div>
