@@ -1,8 +1,18 @@
-<div>
+<div class="mascot-detail">
   <h2>{{model.title}}</h2>
-  {{#animated-container}}
-    {{#animated-value model use=transition duration=duration}}
-      {{mascot-card model=model variant="large"}}
-    {{/animated-value}}
-  {{/animated-container}}
+
+ {{#animated-container class="image-container"}}
+   {{#animated-value model group="images" use=transition duration=duration}}
+     <img class="mascot-detail-image" src={{model.imageURL}} />
+   {{/animated-value}}
+ {{/animated-container}}
+
+ <div class="text-container">
+ <p>
+   Eum odio autem nihil. Vel animi maiores beatae sed praesentium. Velit assumenda fuga sit sed nulla ipsam nobis veritatis. Dolorem enim fugit a numquam corrupti est laboriosam fugiat. Adipisci sed qui est. Ipsum enim aliquam error.
+ </p>
+ <p>
+Rerum nemo voluptas dolorem commodi odio facere deleniti est. Fuga quod sapiente consequuntur nulla. Velit consequatur ab consequatur ut esse. Voluptate rem eveniet tenetur pariatur quia facilis. Maiores error dolorem voluptatem omnis ratione.
+ </p>
+ </div>
 </div>

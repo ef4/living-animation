@@ -184,22 +184,8 @@ main.code {
     margin: 0;
 }
 
-.mascot-card img {
-    height: 100%;
-}
-
-.mascot-card.large {
-    width: 500px;
-    height: 250px;
-}
-
-.mascot-card.large {
-    width: 500px;
-    height: 250px;
-}
-
-.mascot-card > .animated-container {
-    height: 100%;
+.mascot-card > img, .mascot-card > .animated-container {
+    flex-shrink: 0;
 }
 
 .mascot-icon {
@@ -214,6 +200,40 @@ main.code {
 
 .mascot-icon img {
     height: 100%;
+}
+
+.mascot-card-image {
+    width: auto;
+    height: 126px;
+}
+
+.mascot-detail-image {
+    width: auto;
+    height: 250px;
+}
+
+.mascot-detail {
+    display: grid;
+    grid-template-columns: 450px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+          ".      header"
+          "left   right";
+
+}
+
+.mascot-detail .image-container {
+    grid-area: left;
+    display: flex;
+    justify-content: center;
+}
+
+.mascot-detail .text-container {
+    grid-area: right;
+}
+
+.mascot-detail h2 {
+    grid-area: header;
 }
 
 
@@ -355,4 +375,10 @@ button.tutorial:hover {
     text-align: center;
     margin-top: 0;
     margin-bottom: 1rem;
+}
+
+
+/* workaround for an ember-animated bug */
+.animated-container:before, .animated-container:after {
+    display: display;
 }
