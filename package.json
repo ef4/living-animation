@@ -48,10 +48,11 @@
     "ember-source": "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/76dc4deb70cd1e5ae7d83374161925af50946a01.tgz",
     "eslint-plugin-ember": "^5.0.0",
     "fullscreen-api-polyfill": "^1.1.2",
+    "jsdom": "^11.6.2",
     "loader.js": "^4.2.3",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
-    "prember": "^0.2.2"
+    "prember": "0.3.0-alpha.3"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"

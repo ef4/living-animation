@@ -53,6 +53,7 @@ Router.map(function() {
   this.route('testing');
   this.route('quest');
   this.route('links');
+  this.route('slide-map');
 });
 
 export default Router;
