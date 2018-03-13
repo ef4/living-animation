@@ -36,6 +36,12 @@ Router.map(function() {
   this.route('tutorial-17');
   this.route('nested');
   this.route('counter');
+  this.route('tutorial-18');
+  this.route('tutorial-19');
+  this.route('tutorial-20');
+  this.route('tutorial-21');
+  this.route('tutorial-22');
+  this.route('sprite-categories');
 });
 
 export default Router;

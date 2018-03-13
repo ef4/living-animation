@@ -1,0 +1,20 @@
+<div class="tutorial play-favorites">
+  <h2>Pick your favorites</h2>
+  {{! BEGIN-SNIPPET tutorial-18 }}
+  <div class="favorites">
+    <h3>Favorites</h3>
+    {{#each favorites as |mascot|}}
+      {{mascot-icon model=mascot
+                    onclick=(action "unfav" mascot) }}
+    {{/each}}
+  </div>
+
+  <div class="others">
+    <h3>Others to choose from</h3>
+    {{#each others as |mascot|}}
+      {{mascot-icon model=mascot
+                    onclick=(action "fav" mascot) }}
+    {{/each}}
+  </div>
+  {{! END-SNIPPET }}
+</div>

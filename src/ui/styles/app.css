@@ -6,6 +6,7 @@
 }
 
 :root {
+    --highlightBackgroundColor: #ffd7e5;
     --highlightColor: #fd367e;
     --tertiaryColor: #932b77;
     --secondaryColor: #4e1184;
@@ -178,6 +179,7 @@ main.code {
     align-items: center;
     flex-direction: column;
     background-color: white;
+    cursor: pointer;
 }
 
 .mascot-card h3 {
@@ -197,6 +199,7 @@ main.code {
     justify-content: center;
     align-items: center;
     padding: 4px;
+    cursor: pointer;
 }
 
 .mascot-icon img {
@@ -286,4 +289,60 @@ button.tutorial:hover {
     border: 1px solid var(--primaryColor);
     overflow: hidden;
     transform: translateZ(0);
+}
+
+.play-favorites {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+          "header header"
+          "left   right";
+
+}
+
+.play-favorites .favorites {
+    grid-area: left;
+}
+
+.play-favorites .others {
+    grid-area: right;
+}
+
+.play-favorites h2 {
+    grid-area: header;
+}
+
+.sprite-categories {
+    font-size: 2.5rem;
+}
+
+
+.sprite-categories th {
+    text-align: left;
+    padding: 0.5rem 3rem;
+    font-weight: normal;
+    background-color: var(--highlightBackgroundColor);
+}
+
+.sprite-categories table {
+    border-collapse: collapse;
+}
+
+.sprite-categories td {
+    padding: 0.5rem 3rem;
+    font-variant: all-small-caps;
+}
+
+.sprite-categories td:first-child {
+    padding: 0.5rem 3rem;
+    font-variant: initial;
+    font-family: courier;
+}
+
+
+.sprite-categories h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
