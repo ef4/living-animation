@@ -21,6 +21,9 @@ export default Controller.extend({
     sentSprites.forEach(sprite => {
       motionCenterX = sprite.absoluteInitialBounds.left + sprite.absoluteInitialBounds.width / 2;
       motionCenterY = sprite.absoluteInitialBounds.top + sprite.absoluteInitialBounds.height / 2;
+
+      // TODO: this is a workaround for an issue in ember-animated,
+      // you shouldn't ever need to invoke this hook manually.
       arguments[0].onMotionStart(sprite);
     });
 
@@ -40,6 +43,9 @@ export default Controller.extend({
       // want to aim for a place along that line far offscreen.
       sprite.endAtPixel({ x: magnify * dx,  y: magnify * dy });
       distances.set(sprite, distanceFromCenter);
+
+      // TODO: this is a workaround for an issue in ember-animated,
+      // you shouldn't ever need to invoke this hook manually.
       arguments[0].onMotionStart(sprite);
     });
 
