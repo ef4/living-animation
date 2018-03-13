@@ -1,8 +1,9 @@
-<div class="tutorial">
+<div class="tutorial"  >
   <h2>Flexbox Layout: With Reordering</h2>
-  <div class="mascots" >
+  <div class="mascots" tabindex="0"
+                       onfocus={{action activateKeyboardNav}} >
     {{#animated-each sortedMascots use=transition duration=200 watch="dragState" as |mascot|}}
-      <div class="mascot-card" onmousedown={{action beginDragging mascot }}>
+      <div class="mascot-card" tabindex="-1" onkeydown={{action handleKey mascot}} onmousedown={{action beginDragging mascot }}>
         <img class="mascot-card-image" draggable="false" src={{mascot.imageURL}} />
         <h3>{{mascot.title}}</h3>
       </div>
