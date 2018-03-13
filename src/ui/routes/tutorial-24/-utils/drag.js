@@ -1,4 +1,5 @@
 import { Motion, rAF } from 'ember-animated';
+import move from 'ember-animated/motions/move';
 
 export default function drag(sprite, opts) {
   return new Drag(sprite, opts).run();
@@ -51,13 +52,24 @@ class Drag extends Motion {
     let targets = this.opts.others.map(s => makeTarget(s.absoluteFinalBounds, s));
     let ownTarget = makeTarget(sprite.absoluteFinalBounds, sprite);
 
+    let dragState = sprite.owner.value.dragState;
+    let outline;
+    if (dragState && dragState.usingKeyboard) {
+      outline = 'dashed red';
+    } else {
+      outline = 'none';
+    }
+
     sprite.applyStyles({
       zIndex: 1,
-      outline: 'dashed red' // before and after animationg are running,
-                      // users can tab through elements and rely on
-                      // outline to see it. But while we're actually in
-                      // the middle of a mouse drag, it's distracted.
+      outline
     });
+
+    // when we first start a new "keyboard" drag, adjust the active
+    // sprite to catch up with any prior movement.
+    if (dragState && dragState.usingKeyboard) {
+      yield move(sprite);
+    }
 
     while (sprite.owner.value.dragState) {
       let dragState = sprite.owner.value.dragState;
@@ -83,6 +95,7 @@ class Drag extends Motion {
         if (chosenTarget !== ownTarget) {
           this.opts.onCollision(chosenTarget.payload);
         }
+
       } else {
         // these track relative motion since the drag started
         let dx = dragState.latestPointerX - dragState.initialPointerX;
