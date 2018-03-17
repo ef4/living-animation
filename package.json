@@ -22,7 +22,7 @@
     "caniuse-lite": "^1.0.30000697",
     "ember-ajax": "^3.0.0",
     "ember-animated": "^0.2.0",
-    "ember-animated-tools": "^0.2.0",
+    "ember-animated-tools": "^0.3.0",
     "ember-cli": "ember-cli/ember-cli#284b5afb27f79a2a33240fada535731866d79b93",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.6.0",

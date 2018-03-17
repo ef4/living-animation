@@ -2156,9 +2156,9 @@ ember-ajax@^3.0.0:
   dependencies:
     ember-cli-babel "^6.0.0"
 
-ember-animated-tools@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ember-animated-tools/-/ember-animated-tools-0.2.0.tgz#f721431ded563d34ddf8cd0ee2f2dde7b2bfe74d"
+ember-animated-tools@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/ember-animated-tools/-/ember-animated-tools-0.3.0.tgz#4b9dea388034d98d92ae0e58bb1dbcd139f1c64a"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
